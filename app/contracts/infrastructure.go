@@ -16,11 +16,15 @@ type IDbHandler interface {
 type IRow interface {
 	Scan(dest ...interface{}) error
 	Next() bool
-	Close() error	
+	Close() error
 }
 
 type ICacheHandler interface {
 	Set(key string, value []byte) error
 	Get(key string) ([]byte, error)
 	Delete(key string) error
+}
+
+type IQueueHandler interface {
+	Publish(message interface{})
 }
