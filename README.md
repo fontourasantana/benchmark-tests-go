@@ -1,1 +1,1 @@
-# ameicosmeticos-go
+# benchmark-tests-go
